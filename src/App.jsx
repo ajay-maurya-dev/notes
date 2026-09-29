@@ -20,7 +20,9 @@ const App = () => {
   }
 
    const deleted = (idx) => {
-    setTask(task.filter((_, index) => index !== idx))
+    const copyTask = [...task]
+    copyTask.splice(idx,1)
+    setTask(copyTask)
   }
 
   return (
